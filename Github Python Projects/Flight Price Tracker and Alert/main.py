@@ -5,10 +5,10 @@ from pprint import pprint
 import os
 from twilio.rest import Client
 
-account_sid = 'ACf5f818f4ec14e8b34ebc7e9a48557f43'
-auth_token = '79e3691e6b388cc6a5c2e887ade4ddd0'
+account_sid = '*****'
+auth_token = '*****'
 # api.tequila.kiwi.com/v2/search
-TEQUILA_KEY = "WzD0MweacybzENjQB4RpDwSE74GqLtfa"
+TEQUILA_KEY = "*****"
 
 SHEETY_TOKEN = os.environ.get("SHEETY_TOKEN")
 SHEETY_ID = os.environ.get("SHEETY_ID")
@@ -39,8 +39,8 @@ def send_sms():
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body=message,
-        from_='+14793411959',
-        to='+15875774686'
+        from_='+****',
+        to='+****'
     )
     print(message.status)
 
