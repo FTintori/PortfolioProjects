@@ -2,9 +2,9 @@ import requests
 from datetime import datetime
 import smtplib
 from time import sleep
-my_email = "francesco.tintori93@gmail.com"
-MY_LAT = 40#51.080258
-MY_LNG = 167#-114.146711
+my_email = "****@gmail.com"
+MY_LAT = 51
+MY_LNG = -114
 resp = requests.get("http://api.open-notify.org/iss-now.json")
 resp.raise_for_status()
 
@@ -45,8 +45,8 @@ def send_email():
         body = "The ISS should be visible in the sky right now. You should look!"
         msg = f"Subject: {subject}\n\n{body}"
         server.sendmail(
-            'francesco.tintori93@gmail.com',
-            'francesco.tintori93@gmail.com',
+            '****@gmail.com',
+            '****@gmail.com',
             msg
         )
 
