@@ -5,8 +5,8 @@ import datetime as dt
 today = dt.datetime.today()
 from twilio.rest import Client
 
-account_sid = 'ACf5f818f4ec14e8b34ebc7e9a48557f43'
-auth_token = '79e3691e6b388cc6a5c2e887ade4ddd0'
+account_sid = '*****'
+auth_token = '*****'
 
 STOCK = "INTC"
 COMPANY_NAME = "Intel Corporation"
@@ -27,7 +27,7 @@ news_url = ('https://newsapi.org/v2/everything?'
             f'from={today.date()}&'
             'sortBy=popularity&'
             'language=en&'
-            'apiKey=8b522553c7e64ec0ad74b65b24cdda90')
+            'apiKey=*****')
 
 news_resp = requests.get(news_url)
 news_resp.raise_for_status()
@@ -53,8 +53,8 @@ def send_sms():
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body=message,
-        from_='+14793411959',
-        to='+15875774686'
+        from_='+****',
+        to='+****'
     )
     print(message.status)
 
